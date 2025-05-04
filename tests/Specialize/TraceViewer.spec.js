@@ -1,3 +1,12 @@
+/**
+ * @file TraceViewer.spec.js
+ * @description This test script automates the login process for the OrangeHRM demo site using Playwright. 
+ * It includes tracing functionality to capture screenshots and snapshots for debugging purposes.
+ * The test verifies the ability to interact with locators such as placeholders and roles.
+ * 
+ * @module TraceViewerTest
+ * @requires @playwright/test
+ */
 // @ts-check
 
 const {test, expect} = require("@playwright/test")

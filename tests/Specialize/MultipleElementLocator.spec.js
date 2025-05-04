@@ -1,3 +1,9 @@
+/**
+ * @fileoverview This script tests locating multiple elements on a webpage using Playwright.
+ * It navigates to the DemoBlaze website and retrieves product names from the homepage.
+ * The test demonstrates the use of XPath selectors and iterating over multiple elements.
+ */
+
 // @ts-check
 
 const {test, expect} = require("@playwright/test")

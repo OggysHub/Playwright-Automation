@@ -1,3 +1,10 @@
+/**
+ * @file DropdownMultiple.spec.js
+ * @description This test script automates the handling of a dropdown list on the Sauce Demo website. 
+ * It includes steps for logging in and selecting multiple options from a dropdown menu.
+ * The script demonstrates the use of Playwright for end-to-end testing.
+ */
+
 //@ts-check
 
 const {test, expect} = require("@playwright/test")

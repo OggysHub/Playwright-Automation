@@ -1,8 +1,10 @@
+/**
+ * @file Homepage.spec.js
+ * @description This test script validates the title and URL of the homepage of the DemoBlaze website. 
+ * It ensures that the page title matches the expected value and the URL is correct after navigation.
+ * Additionally, it logs the page title and URL for debugging purposes.
+ */
 // @ts-check
-
-//Note:
-//use async for making sure that the anonymous function will return a promise
-//Await is for making sure that a particular function should wait for it's previous function promise resolving
 
 const {test, expect} = require("@playwright/test")
 

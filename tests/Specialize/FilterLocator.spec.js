@@ -1,3 +1,11 @@
+/**
+ * @fileoverview This script tests the filtering of locators on a webpage using Playwright.
+ * It navigates to the OrangeHRM demo site, logs in, and demonstrates filtering locators by text and child elements.
+ * The test ensures that specific elements can be interacted with based on their properties.
+ *
+ * @module FilterLocator.spec
+ */
+
 // @ts-check
 
 const {test, expect} = require("@playwright/test")
