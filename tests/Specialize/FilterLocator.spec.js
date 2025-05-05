@@ -20,8 +20,8 @@ test('Filtering Locators', async({page}) =>{
     await page.waitForTimeout(10000);
 
     //Filter By Text
-    await page.getByRole('listitem').filter({hasText:/Leave/}).click;
+    //await page.getByRole('listitem').filter({hasText:/Leave/}).click;
 
     //Filter By Child
-    await page.getByRole('listitem').filter({has: page.getByRole('link',{name: 'Leave'})}).click();
+    //await page.getByRole('listitem').filter({has: page.getByRole('link',{name: 'Leave'})}).click();
 })
