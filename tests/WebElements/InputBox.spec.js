@@ -10,16 +10,18 @@ const { test, expect } = require('@playwright/test');
 
     test('Asseration for input box type', async ({ page }) => {
         // Navigate to the website
-        await page.goto('https://itera-qa.azurewebsites.net/home/automation');
+        await page.goto('https://demoqa.com/text-box');
 
-        // Fill out the Name field
-        await expect (await page.locator('#name')).toBeVisible();
-        await expect (await page.locator('#name')).toBeEmpty();
-        await expect (await page.locator('#name')).toBeEditable();
-        await expect (await page.locator('#name')).toBeEnabled();
+        // Verify the input box is visible, empty, editable, and enabled
+        await expect (await page.locator('#userName')).toBeVisible();
+        await expect (await page.locator('#userName')).toBeEmpty();
+        await expect (await page.locator('#userName')).toBeEditable();
+        await expect (await page.locator('#userName')).toBeEnabled();
 
-        await page.locator('#name').fill('John Doe');
-        await expect (await page.locator('#name')).toHaveValue('John Doe');
-        await expect (await page.locator('#name')).toHaveText('John Doe');
-        //await page.fill('#name', 'John Doe');
+        // Fill the input box with a value
+        await page.locator('#userName').fill('John Doe');
+        // Verify the input box is no longer empty
+        await expect (await page.locator('#userName')).not.toBeEmpty();
+        // Verify the input box contains the expected value
+        await expect (await page.locator('#userName')).toHaveValue('John Doe');
     });
