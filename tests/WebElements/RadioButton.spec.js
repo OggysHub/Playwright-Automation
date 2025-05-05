@@ -14,24 +14,24 @@ test('Handling Radio Button', async({page}) =>{
     // Assert that the "Male" radio button is not checked initially
     const maleRadioButton = page.locator('//label[normalize-space()="Male"]/preceding-sibling::input');
     await expect(maleRadioButton).not.toBeChecked(); // Check if the radio button is not checked
-    await expect((maleRadioButton).isChecked()).toBeFalsy(); // Check if the radio button is not checked
+    expect(await maleRadioButton.isChecked()).toBeFalsy(); // Check if the radio button is not checked
 
     // Click the "Male" radio button
     await page.locator('//label[normalize-space()="Male"]').check();
 
     // Assert that the "Male" radio button is now checked
     await expect(maleRadioButton).toBeChecked(); // Check if the radio button is checked
-    await expect((maleRadioButton).isChecked()).toBeTruthy(); // Check if the radio button is checked
+    expect(await maleRadioButton.isChecked()).toBeTruthy(); // Check if the radio button is checked
 
     // Assert that the "Female" radio button is not checked
     const femaleRadioButton = page.locator('//label[normalize-space()="Female"]/preceding-sibling::input');
     await expect(femaleRadioButton).not.toBeChecked(); // Check if the radio button is not checked
-    await expect((femaleRadioButton).isChecked()).toBeFalsy(); // Check if the radio button is not checked
+    expect(await femaleRadioButton.isChecked()).toBeFalsy(); // Check if the radio button is not checked
 
     // Click the "Female" radio button
     await page.locator('//label[normalize-space()="Female"]').check();
 
     // Assert that the "Female" radio button is now checked
     await expect(femaleRadioButton).toBeChecked(); // Check if the radio button is checked
-    await expect((femaleRadioButton).isChecked()).toBeTruthy(); // Check if the radio button is checked
+    expect(await femaleRadioButton.isChecked()).toBeTruthy(); // Check if the radio button is checked
 })
